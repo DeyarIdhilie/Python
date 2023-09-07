@@ -26,3 +26,31 @@ print(int('342'))
 print(float('25.3'))
 """print(float('25.3'))#ValueError: invalid literal for int() with base 10: '25.3'"""
 print(float('2'))#2.0
+
+#round(number, decimalDigits)
+#the first argumant is requried, but the second is optional
+#the second argument is optional bc it's by default a zero
+'''round()#TypeError: round() missing required argument 'number' (pos 1)'''
+print(round(1.55))#2
+x= round(1.2245)#1
+print(x)#1
+print(type(x))#<class 'int'>
+y= round(x,2)
+print(y)#1
+z= round(1.52557,3)#1.526
+print(z)
+print(type(z))#<class 'float'>
+
+#note: banker's rounding, which means when the decimal is .5, you either round up or down so that the result is always even
+print(round(2.5))#2
+print(round(51.5))#52
+print(round(-51.5))#-52
+print(round(-2.5))#-2
+
+#if the second argument is positive the round function works on the decimal digigts
+#but if it's negative, it works on the integer part
+print(round(171.573653,-2))#-2 means to the nearest hundred #200
+print(round(5463, -2))#5500
+print(round(5465,-1))#to the nearest ten#also note when half round to the nearest even
+#print(round(2.35, .5))#TypeError: 'float' object cannot be interpreted as an integer
+print(round(2.35, int(.5)))#2.0
