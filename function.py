@@ -41,3 +41,21 @@ pass_arguments(3,2)
 result = print('hi')
 print(result)#None
 #note None is what called null in other languages
+
+#Default argument
+#how to define an argument with an initial value
+#this basiclly means that if the value was passed during function calling the inital value will be used
+def greet(who="Colin"):
+    print("Hello,",who)
+
+greet()#Hello, Colin
+greet('Deyar')#Hello, Deyar
+greet(who="Student")#Hello, Student
+greet(4)#Hello, 4
+
+#example of a builtin function with a default argument
+#print(*args, sep=' ', end='\n', file=None, flush=False)
+#sep is the special string that is added between printed arguments
+#its default value is single space
+print("Hi","guys", "!")#Hi guys !
+print(4,5,6,sep='+')#4+5+6
