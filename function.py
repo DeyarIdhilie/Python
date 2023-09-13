@@ -35,3 +35,9 @@ pass_arguments(3,2)
 3
 2
 <class 'int'>'''
+
+#if a function doesn't return anything what will happen if we tried to print the result of calling it
+#ex
+result = print('hi')
+print(result)#None
+#note None is what called null in other languages
