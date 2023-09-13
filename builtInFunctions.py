@@ -59,3 +59,9 @@ print(round(2.35, int(.5)))#2.0
 help(abs)
 '''abs(x, /)
     Return the absolute value of the argument.'''
+#help() display 2 things ,first the function header and the argunments it takes&&a description of what it does
+#we only need to send the function name
+#in progarmming it's known that func() is a way of calling the function, so if we say help(func()) the func will be called before the help
+'''help(round())
+TypeError: round() missing required argument 'number' (pos 1)'''
+help(round(2.1))#what happens right here is that the help will be on integers, since the value of the expression will be calculated then the help will be called
