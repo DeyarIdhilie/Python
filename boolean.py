@@ -78,3 +78,12 @@ prepared_for_weather = have_umbrella
                        or (rain_level < 5 and have_hood) 
                        or (not (rain_level > 0 and is_workday))
 '''
+
+#excluive or , XOR
+#meaning exactly one, only one
+'''a | b | a xor b
+T | T | F
+T | F | T
+F | T | T
+F | F | F'''
+#xor = (a and not b) or (not a and b)
