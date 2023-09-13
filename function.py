@@ -59,3 +59,41 @@ greet(4)#Hello, 4
 #its default value is single space
 print("Hi","guys", "!")#Hi guys !
 print(4,5,6,sep='+')#4+5+6
+
+#Functions Applied to functions
+#u can suply functions as arguments to othe functions
+
+def call(func, num):
+    return func(num)
+
+def multiply_by_five(x):
+    return 5 * x
+
+def add_five(x):
+    return 5 + x
+
+def subtract_five(x):
+    return x - 5
+
+product= call(multiply_by_five,3)#15
+print(product)
+result= call(add_five, 6)#11
+print(result)
+print(call(subtract_five, 7))#2
+#functions that operate on other functions are called "high-order functions"
+
+#some builtin high-order functions --> max
+#max function has an optionl key argument that takes a function
+#if we pass in a function using key, it returns the argument x where key(x) is max
+
+def mod_five(x):
+    return x % 5
+print(max(100, 51, 14)#which is the largest number
+      ,
+      max(100, 51, 14, key= mod_five)#which number is the largest modul 5
+      ,
+      sep= '\n')
+'''--> output 
+       100
+        14
+'''
