@@ -87,3 +87,6 @@ T | F | T
 F | T | T
 F | F | F'''
 #xor = (a and not b) or (not a and b)
+
+#int() on a bool?
+print('bool to integer', int(True), int (False))#bool to integer 1 0
