@@ -64,3 +64,7 @@ print(bool(0))#False
 print(bool(""))#False
 print(bool(" "))#True
 print(bool("spam"))#True
+
+# if else in the same line
+x=20
+print('x is greater than 10?',True if x>10 else False)#x is greater than 10? True
