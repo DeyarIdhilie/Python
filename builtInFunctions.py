@@ -54,3 +54,8 @@ print(round(5463, -2))#5500
 print(round(5465,-1))#to the nearest ten#also note when half round to the nearest even
 #print(round(2.35, .5))#TypeError: 'float' object cannot be interpreted as an integer
 print(round(2.35, int(.5)))#2.0
+
+#help function
+help(abs)
+'''abs(x, /)
+    Return the absolute value of the argument.'''
