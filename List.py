@@ -1,5 +1,6 @@
 #starting with datastructure in python
 #List--> ordered sequence of values
+import math
 
 listOfIntegers = [2,5,7,3]
 listOfStrings = ['Tulkarm','Nablus','Ramallah']
@@ -97,3 +98,27 @@ help(planets)
 #how to delete all the elements of a list
 planets.clear()
 print(planets)#[]
+
+
+d = [1, 2, 3][1:]
+print(d)#[2, 3]
+
+
+def fashionably_late(arrivals, name):
+    """Given an ordered list of arrivals to the party and a name, return whether the guest with that
+    name was fashionably late.
+    """
+    party_attendence = len(arrivals)
+    the_middle = 0
+    if (party_attendence % 2) == 1:
+        the_middle = math.ceil(party_attendence / 2)
+    else:
+        the_middle = party_attendence / 2
+
+    person_order = arrivals.index(name)
+    if person_order > the_middle - 1 and not person_order == party_attendence - 1:
+        return True
+    else:
+        return False
+
+print(fashionably_late(['Paul', 'John', 'Ringo', 'George'], 'John'))
