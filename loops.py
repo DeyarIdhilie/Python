@@ -106,3 +106,18 @@ help(any)
 def is_lucky_using_any(numbers):
     return(any([num%7 == 0 for num in numbers]))
 print(is_lucky_using_any(lucky_list), is_lucky_using_any(not_lucky_list))#True False
+
+#python panda and numpy compare each element in the list to number(element-wise comparison)
+#let's implement that behavior
+#it should return a list of true or false, true if the element is greater than the number, false otherwise
+
+def element_wise_comparison_greater_than_loop(theList, number):
+    comparison_result = []
+    for element in theList:
+            comparison_result.append(element>number)
+    return comparison_result
+print(element_wise_comparison_greater_than_loop([1, 2, 3, 4], 2))#[False, False, True, True]
+
+def element_wise_comparison_greater_than_list_comprehension(theList, number):
+    return([element > number for element in theList])
+print(element_wise_comparison_greater_than_list_comprehension([1, 2, 3, 4], 2))
