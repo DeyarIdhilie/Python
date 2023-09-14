@@ -1,0 +1,56 @@
+#how to iterate in a list
+names = ["Deyar","Limar","Islam","Ali","Yousef"]
+for name in names:
+    print(name,end=' ')#Deyar Limar Islam Ali Yousef
+
+#iterate in a tuple
+multplicands = (3,5,1,6,9)
+product = 1
+for num in multplicands:
+    product= num*product
+print(product)#810
+
+#iterate in a string
+s = 'steganograpHy is the practicE of conceaLing a file, message, image, or video within another fiLe, message, image, Or video.'
+for char in s:
+    if char.isupper():
+        print(char,end='')#HELLO
+print('\n')
+#range()
+#range(n) means integers from 0 to n-1
+#range(4) means 0,1,2,3
+for i in range(5):
+    print(i,end='')
+#01234
+
+print('\n')
+
+#while loop
+#it will iterate untill the condition is met
+i = 0
+while i<10:
+    print(i, end=' ')
+    i+=1
+#0 1 2 3 4 5 6 7 8 9
+
+print('\n')
+
+#list comprehension
+squares = [n**2 for n in range(10)]#[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+print(squares)
+
+#do the samething without list comprehension
+i=0
+squares = []
+for i in range(10):
+    squares.append(i**2)
+print(squares)#[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+#find even number in a list
+numbers= [1,2,3,4,5,6,7,8,9,10,11,12]
+even_numbers = [number for number in numbers if (number%2 ==0)]
+print(even_numbers)#[2, 4, 6, 8, 10, 12]
+
+#multiply even numbers by 10
+even_numbers_by_ten = [number*10 for number in numbers if (number%2 == 0)]
+print(even_numbers_by_ten)#[20, 40, 60, 80, 100, 120]
