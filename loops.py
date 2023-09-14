@@ -54,3 +54,20 @@ print(even_numbers)#[2, 4, 6, 8, 10, 12]
 #multiply even numbers by 10
 even_numbers_by_ten = [number*10 for number in numbers if (number%2 == 0)]
 print(even_numbers_by_ten)#[20, 40, 60, 80, 100, 120]
+
+#find number of negatives in a list
+#first using a for loop
+count_negatives = 0
+numbers = [1,3,0,0,-1,-5,4,-20]
+for number in numbers:
+    if number<0:
+        count_negatives +=1
+print(count_negatives)#3
+
+#using sum and list comprehension
+count_negatives= sum([num<0 for num in numbers])#[F,F,F,F,T,T,F,T]#note:the int value of true is 1 and false is 0
+print(count_negatives)#3
+
+#using len and list comprehension
+count_negatives= len([num for num in numbers if num<0])
+print(count_negatives)#3
