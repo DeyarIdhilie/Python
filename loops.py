@@ -71,3 +71,38 @@ print(count_negatives)#3
 #using len and list comprehension
 count_negatives= len([num for num in numbers if num<0])
 print(count_negatives)#3
+
+#find if a given list of numbers is lucky, a lucky list has at least one number divisible by 7
+
+
+lucky_list = [5,2,51,49,6]
+not_lucky_list = [1,3,5]
+def is_lucky(numbers):
+    # using list comprehension
+    print(
+        (sum([num % 7 == 0 for num in numbers]))>0
+    )
+    print(
+        (len([num for num in numbers if num%7==0]))>0
+    )
+    # using for loop
+    for num in numbers:
+        if num%7 ==0:
+            return True
+    return False
+print(is_lucky(lucky_list), is_lucky(not_lucky_list))
+'''True
+True
+False
+False
+True False'''
+
+#using list comprehension and any
+help(any)
+'''any(iterable, /)
+    Return True if bool(x) is True for any x in the iterable.
+    
+    If the iterable is empty, return False.'''
+def is_lucky_using_any(numbers):
+    return(any([num%7 == 0 for num in numbers]))
+print(is_lucky_using_any(lucky_list), is_lucky_using_any(not_lucky_list))#True False
