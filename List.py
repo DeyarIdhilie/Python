@@ -12,6 +12,11 @@ listOfLists = [
     ['hello','world','!']
 ]
 
+#how to access element in a list of list
+#example !
+exlamtion = listOfLists[-1][-1]
+print('exlamtion', exlamtion)#exlamtion !
+
 planets = ['pluto', 'venus', 'Mercury']
 #since lists are ordered ---> each element could be accessed by index
 print(planets[0])#pluto
