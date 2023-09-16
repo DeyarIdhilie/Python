@@ -88,6 +88,16 @@ print('we will be aired at 2 am on the '+day+"th",sep='')#we will be aired at 2 
 print('{}, we wil be aired at 2 on the {}th'.format('hi',9))#hi, we wil be aired at 2 on the 9th
 print('%s, we will be aired at 2 am on the %dth'%('hi',9))#hi, we will be aired at 2 am on the 9th
 
+#more on formate
+print('{0} everyone, it is ur favorite {1} ,{0}! {1}! '.format('hi','programmer'))#hi everyone, it is ur favorite programmer ,hi! programmer!
+
+#more on formating numbers in strings
+print('my weight is {:.1} and my age is {:.2} '.format(52.5,22.5))
+pluto_mass = 1.303 * 10**22
+earth_mass = 5.9722 * 10**24
+population = 52910390
+print(pluto_mass / earth_mass, '{:.3%},{:,}'.format(pluto_mass / earth_mass,population))#0.002181775560095107 0.218%,52,910,390
+
 #rstrip(set of characters)
 #rstrip remove any one of those characters if found at the end of a string
 dirty = 'Deyar,lmm,.'
