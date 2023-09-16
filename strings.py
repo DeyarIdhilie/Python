@@ -134,4 +134,10 @@ def word_search(doc_list, keyword):
 doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville", 'saw a casIno, let us enter']
 print(word_search(doc_list, 'casino'))
 
+#padding
+#string.rjust(length,char)#the char will be added to the left of the string until the padding+string reach to the length#the default char is single space
+text = 'Deyar'
+"""new_text = text.rjust(10,'xo')#TypeError: The fill character must be exactly one character long"""
+new_text = text.rjust(10,'x')
+print(new_text)#xxxxxDeyar
 
