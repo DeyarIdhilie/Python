@@ -110,6 +110,37 @@ print(my_dict.pop('country', None))#None
 print(my_dict.pop('country', 'palestine'))#palestine
 print(my_dict.pop('city',None))#New York
 
+#multi_word_search problem
+'''Now the researcher wants to supply multiple keywords to search for. Complete the function below to help her.'''
+def word_search(doc_list, keyword):
+    indicies =[]
+
+    for index,doc  in enumerate(doc_list):
+        words = doc.split()
+        clean_words = [word.rstrip(',.').lower() for word in words]
+        if keyword.lower() in clean_words:
+            indicies.append(index)
+    return indicies
+
+def multi_word_search(doc_list, keywords):
+    """Takes list of documents (each document is a string) and a list of keywords.
+    Returns a dictionary where each key is a keyword, and the value is a list of indices
+    (from doc_list) of the documents containing that keyword"""
+    return {keyword: word_search(doc_list,keyword) for keyword in keywords}
+
+doc_list = ["The Learn Python Challenge Casino.", "They bought a car and a casino", "Casinoville"]
+keywords = ['casino', 'they']
+print(multi_word_search(doc_list, keywords))#{'casino': [0, 1], 'they': [1]}
+
+#or
+def multi_word_search2(doc_list, keywords):
+    each_keyword_indicies = {}
+    for keyword in keywords:
+        each_keyword_indicies[keyword] = word_search(doc_list,keyword)
+
+    return each_keyword_indicies
+
+print(multi_word_search2(doc_list, keywords))#{'casino': [0, 1], 'they': [1]}
 
 
 
