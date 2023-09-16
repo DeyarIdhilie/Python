@@ -90,3 +90,4 @@ F | F | F'''
 
 #int() on a bool?
 print('bool to integer', int(True), int (False))#bool to integer 1 0
+

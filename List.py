@@ -122,3 +122,5 @@ def fashionably_late(arrivals, name):
         return False
 
 print(fashionably_late(['Paul', 'John', 'Ringo', 'George'], 'John'))
+
+

@@ -120,4 +120,16 @@ print(element_wise_comparison_greater_than_loop([1, 2, 3, 4], 2))#[False, False,
 
 def element_wise_comparison_greater_than_list_comprehension(theList, number):
     return([element > number for element in theList])
+
 print(element_wise_comparison_greater_than_list_comprehension([1, 2, 3, 4], 2))
+
+def menu_is_boring(meals):
+    """Given a list of meals served over some period of time, return True if the
+    same meal has ever been served two days in a row, and False otherwise.
+    """
+    for i in range(len(meals)-1):
+        if meals[i] == meals[i+1]:
+            return True
+    return False
+#note range(0) and range(-1) are both = zero so if the length is 1 or 0 the loop will not be entered and the value will be False
+        
